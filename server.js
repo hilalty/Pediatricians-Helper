@@ -11,6 +11,7 @@ const methodOverride = require("method-override");
 const PORT = 3000;
 
 const Patient = require("./models/patients.js");
+const patientController = require("./controllers/patientController");
 
 /**
  * Controller requires go here ⬇️
@@ -35,64 +36,7 @@ setupMiddleware(app);
 app.set("view engine", "jsx");
 app.engine("jsx", require("jsx-view-engine").createEngine());
 
-
-// index
-app.get("/patients", (req, res) => {
-  Patient.find({}, (error, allPatients) => {
-    res.render("Index", {
-      patients: allPatients,
-    });
-  });
-});
-
-//new
-app.get("/patients/new", (req, res) => {
-  res.render("New");
-});
-
-//delete
-app.delete("/patients/:id", (req, res) => {
-  Patient.findByIdAndRemove(req.params.id, (err, data) => {
-    res.redirect("/patients");
-  });
-});
-
-//update
-app.put('/patients/:id', (req, res)=>{
-    Patient.findByIdAndUpdate(req.params.id, req.body, (err, updatedPatient)=>{
-       console.log(updatedPatient)
-        res.redirect(`/patients/${req.params.id}`);
-    });
-});
-
-//create
-app.post("/patients", (req, res) => {
-  Patient.create(req.body, (error, createdPatient) => {
-    res.redirect("/patients");
-  });
-});
-
-//edit
-app.get("/patients/:id/edit", (req, res) => {
-  Patient.findById(req.params.id, (err, foundPatient) => {
-    if (!err) {
-      res.render("Edit", {
-        patient: foundPatient,
-      });
-    } else {
-      res.send({ msg: err.message });
-    }
-  });
-});
-
-//show
-app.get("/patients/:id", (req, res) => {
-  Patient.findById(req.params.id, (err, foundPatient) => {
-    res.render("Show", {
-      patient: foundPatient,
-    });
-  });
-});
+app.use("/patients", patientController);
 
 app.get("/", (req, res) => {
   res.redirect("/patients/");
