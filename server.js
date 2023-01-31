@@ -4,6 +4,7 @@ const express = require("express");
 const app = express();
 const PORT = 3000;
 const patientController = require("./controllers/patientController");
+const userController = require("./controllers/userController")
 
 const db = require('./models/db')
 db.once('open', () => {
@@ -19,9 +20,10 @@ setupMiddleware(app);
 
 
 app.use("/patients", patientController);
+app.use("/user", userController);
 
 app.get("/", (req, res) => {
-  res.redirect("/patients/");
+  res.redirect("/patients");
 });
 
 app.listen(PORT, () => {

@@ -1,7 +1,6 @@
-/* const jwt = require("jsonwebtoken");
+const jwt = require("jsonwebtoken");
 
 async function authorization(req, res, next) {
-  // Parse the header with the token. Verify the jwt. pass the _id into the locals
   const { authorization } = req.headers;
   const bearerToken = authorization?.split(" ")[1];
 
@@ -15,12 +14,11 @@ async function authorization(req, res, next) {
       res.locals.data.user = verified;
       next();
     } else {
-      return res.status(401).json({ error: "A problem occured" });
+      return res.status(401).json({ error: "A problem occurred" });
     }
   } catch (error) {
-    return res.status(401).json({ error: "A problem occured" });
+    return res.status(401).json({ error: "A problem occurred" });
   }
 }
 
 module.exports = authorization;
-*/

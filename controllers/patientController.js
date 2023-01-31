@@ -4,6 +4,16 @@ const router = express.Router();
 const viewController = require('./viewController.js')
 const dataController = require('./dataController.js')
 
+router.use((req, res, next) => {
+    console.log("session", req.session);
+  
+    if (req.session.loggedIn) {
+      next();
+    } else {
+      res.redirect("/user/login");
+    }
+  });
+
 
 router.get('/', dataController.index, viewController.index);
 
