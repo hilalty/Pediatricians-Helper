@@ -1,0 +1,61 @@
+.links {
+    color:black;
+    text-decoration: none ;
+    background-color:aquamarine;
+    border-radius: 10px;
+    font-size: 1em;
+    padding: 5px;
+    margin: 10px;
+}
+
+.links:hover {
+    color: ghostwhite;
+    background-color:dimgrey;
+}
+  
+
+
+.patients {
+    color:darkslategrey;
+    text-decoration: none ;
+    font-size: 1.5em;
+    background-color: bisque;
+    border-radius: 2px;
+    padding: 5px;
+    margin: 10px;
+}
+
+.patients:hover {
+    color: ghostwhite;
+    background-color:dimgrey;
+}
+
+.buttons {
+    padding: 5px;
+   
+}
+
+.deleteUpdatebtn {
+    padding: 5px;
+}
+
+.logout {
+    display: flex;
+    justify-content: flex-end;
+    text-decoration: none;
+
+}
+
+body {
+    background-color:lightseagreen;
+}
+
+h1 {
+    font-style: italic;
+
+}
+
+.indexTitle {
+    display: flex;
+    flex-direction: column;
+}

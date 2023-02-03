@@ -1,49 +1,53 @@
 const React = require("react");
+const BasicLayout = require("../layout/Basic");
 
 class Index extends React.Component {
   render() {
     const { patients } = this.props;
 
     return (
-      <div>
-        <h1> Patients Index Page</h1>
+      <BasicLayout cssPath="public/css/app.css">
         <nav>
-          <a href="/patients/new">Create a New Patient Account</a>
-          <div>
-            <a href="/user/signup">
-              <button>Sign up</button>
-            </a>
-            <a href="/user/login">
-              <button>Log in</button>
-            </a>
-          </div>
-          <a href="/user/logout">
-            <button className="logoutBtn">Logout</button>
+          <a className="logout" href="/user/logout">
+            <button>Logout</button>
+          </a>
+          <a className="buttons" href="/user/signup">
+            <button>Sign up</button>
+          </a>
+          <a className="buttons" href="/user/login">
+            <button>Log in</button>
           </a>
         </nav>
-        <ul>
-          {this.props.patients.map((patient, i) => {
-            return (
-              <li key={i}>
-                <a href={`/patients/${patient.id}`}>
-                  {" "}
-                  {patient.firstName} {patient.lastName}{" "}
-                </a>
+        <h1>Patients Main Page</h1>
+        <a className="links" href="/patients/new">
+          Create a New Patient Account
+        </a>
+        
+        <div>
+          <ul>
+            {patients.map((patient, i) => {
+              return (
+                <li key={i}>
+                  <a className="patients" href={`/patients/${patient.id}`}>
+                    {" "}
+                    {patient.firstName} {patient.lastName}{" "}
+                  </a>
 
-                <form
-                  action={`/patients/${patient.id}?_method=DELETE`}
-                  method="POST"
-                >
-                  <input type="submit" value="DELETE" />
-                </form>
-                <form action={`/patients/${patient.id}/edit`} method="GET">
-                  <input type="submit" value="UPDATE" />
-                </form>
-              </li>
-            );
-          })}
-        </ul>
-      </div>
+                  <form className="deleteUpdatebtn" 
+                    action={`/patients/${patient.id}?_method=DELETE`}
+                    method="POST"
+                  >
+                    <input type="submit" value="DELETE" />
+                  </form>
+                  <form className="deleteUpdatebtn" action={`/patients/${patient.id}/edit`} method="GET">
+                    <input type="submit" value="UPDATE" />
+                  </form>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      </BasicLayout>
     );
   }
 }

@@ -1,15 +1,16 @@
 const React = require("react");
+const BasicLayout = require("../layout/Basic");
 
 class Edit extends React.Component {
   render() {
     const patient = this.props.patient;
     return (
-      <>
+      <BasicLayout cssPath="public/css/app.css">
         <h1>
           {patient.firstName} {patient.lastName} Edit Page
         </h1>
         <nav>
-          <a href="/patients">Back</a>
+          <a className="links" href="/patients">Back</a>
         </nav>
         <form action={`/patients/${patient.id}?_method=PUT`} method="POST">
           <p>
@@ -46,7 +47,7 @@ class Edit extends React.Component {
           </p>
           <input type="submit" value="Update" />
         </form>
-      </>
+        </BasicLayout>
     );
   }
 }

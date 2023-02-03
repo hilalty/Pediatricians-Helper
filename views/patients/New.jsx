@@ -1,8 +1,10 @@
 const React = require("react");
+const BasicLayout = require("../layout/Basic");
 
 class New extends React.Component {
   render() {
     return (
+      <BasicLayout cssPath="public/css/app.css">
       <div>
         <h1>New Patient Page</h1>
         <form action="/patients" method="POST">
@@ -22,6 +24,7 @@ class New extends React.Component {
           <input type="submit" name="" value="Create a Patient Account" />
         </form>
       </div>
+      </BasicLayout>
     );
   }
 }
