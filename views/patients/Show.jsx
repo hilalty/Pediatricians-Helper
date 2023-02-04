@@ -8,17 +8,17 @@ class Show extends React.Component {
     return (
       <BasicLayout cssPath="public/css/app.css">
         <header className="header">
-        <nav><img src="../images/hedwig_2.jpeg" className="hedwig_img" alt="h"/>
+        <nav><img src="/images/hedwig_2.jpeg" className="hedwig_img" alt="h"/>
         <a className="logout" href="/user/logout">
               <button>Logout</button>
             </a></nav>
         <p>Hedwig Pediatrics</p>
         </header>
-        <div>
-          <h1>Patient Information</h1>
+        <h1>Patient Information</h1>
+        <div className="div">
           <nav>
             <a className="links" href="/patients">
-              Main
+              Main Page
             </a>
           </nav>
           <p>

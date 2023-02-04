@@ -10,7 +10,7 @@ class Edit extends React.Component {
         <header className="header">
           <nav>
             <img
-              src="../../images/hedwig_2.jpeg"
+              src="/images/hedwig_2.jpeg"
               className="hedwig_img"
               alt="h"
             />
@@ -20,6 +20,7 @@ class Edit extends React.Component {
           </nav>
           <p>Hedwig Pediatrics</p>
         </header>
+        <div className="div">
         <h1>
           {patient.firstName} {patient.lastName} Edit Page
         </h1>
@@ -67,6 +68,7 @@ class Edit extends React.Component {
           </p>
           <input type="submit" value="Update" />
         </form>
+        </div>
       </BasicLayout>
     );
   }

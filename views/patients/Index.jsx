@@ -9,7 +9,7 @@ class Index extends React.Component {
       <BasicLayout cssPath="public/css/app.css">
         <header className="header">
           <nav>
-            <img src="../images/hedwig_2.jpeg" className="hedwig_img" alt="h" />
+            <img src="/images/hedwig_2.jpeg" className="hedwig_img" alt="h" />
             <a className="logout" href="/user/logout">
               <button>Logout</button>
             </a>
@@ -21,12 +21,11 @@ class Index extends React.Component {
           Create a New Patient Account
         </a>
 
-        <div>
+        <div className="div">
           <ul>
             {patients.map((patient, i) => {
               return (
                 <li key={i}>
-                  <p>Doctor's username: {patient.username}</p>
                   <a className="patients" href={`/patients/${patient.id}`}>
                     {" "}
                     {patient.firstName} {patient.lastName}{" "}

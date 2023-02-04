@@ -6,14 +6,17 @@ class New extends React.Component {
     return (
       <BasicLayout cssPath="public/css/app.css">
                 <header className="header">
-        <nav><img src="../images/hedwig_2.jpeg" className="hedwig_img" alt="h"/>
+        <nav><img src="/images/hedwig_2.jpeg" className="hedwig_img" alt="h"/>
         <a className="logout" href="/user/logout">
               <button>Logout</button>
             </a></nav>
         <p>Hedwig Pediatrics</p>
         </header>
-        <div>
+        <div className="div">
           <h1>New Patient Page</h1>
+          <a className="links" href="/patients">
+              Main Page
+            </a>
           <form action="/patients" method="POST">
             <h3>
               First Name: <br />

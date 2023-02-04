@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik+Gemstones&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Neucha&family=Rubik+Gemstones&display=swap');
 
 .links {
     color:black;
@@ -8,6 +8,12 @@
     font-size: 1em;
     padding: 5px;
     margin: 10px;
+    font-size: 2vw;
+    
+}
+
+.div {
+    font-size: 1.5vw;
 }
 
 .links:hover {
@@ -38,7 +44,12 @@
 }
 
 .deleteUpdatebtn {
-    padding: 5px;
+    display: inline-block;
+    margin: 5px;
+    
+
+    
+    
 }
 
 .logout {
@@ -48,10 +59,12 @@
 
 body {
     background-color:lightseagreen;
+    font-family: 'Neucha', cursive;
 }
 
 h1 {
     font-style: italic;
+    font-size: 4vw;
 
 }
 
@@ -61,14 +74,16 @@ h1 {
 }
 
 ul {
-    display: flex;
+    display:block;
     padding: 0;
+    
 }
 
 li {
     margin: 0 20px;
-    list-style: none;
+    list-style:none;
     padding: 0;
+    margin-top: 2vw;
 }
 
 .header {
