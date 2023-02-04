@@ -7,7 +7,7 @@ This is a toll aimed for pediatricians to keep their patient data.
 **Technologies Used:** Javascript, HTML, CSS, Node.js, Express, React, Mongo DB, Heroku
 
 **Getting Started:** 
-> https://git.heroku.com/pediatricians-helper.git
+> https://pediatricians-helper.herokuapp.com/
 
 **Next Steps:** 
 
