@@ -1,14 +1,13 @@
 
 # Pediatrician's Helper
-This is a toll aimed for pediatrician to keep their patient data.
+This is a toll aimed for pediatricians to keep their patient data.
 
 **Screenshots:** 
 
 **Technologies Used:** Javascript, HTML, CSS, Node.js, Express, React, Mongo DB, Heroku
 
 **Getting Started:** 
->    In this section include the link to your deployed app and any
-> instructions you deem important.
+> https://git.heroku.com/pediatricians-helper.git
 
 **Next Steps:** 
 
