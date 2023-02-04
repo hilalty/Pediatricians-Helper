@@ -4,6 +4,11 @@ This is a toll aimed for pediatricians to keep their patient data.
 
 **Screenshots:** 
 ![Login Page](/screenshots/1.png)
+![Signup Page](/screenshots/2.png)
+![Index Page](/screenshots/3.png)
+![New Page](/screenshots/4.png)
+![Show Page](/screenshots/5.png)
+![Edit Page](/screenshots/6.png)
 
 **Technologies Used:** Javascript, HTML, CSS, Node.js, Express, React, Mongo DB, Heroku
 
