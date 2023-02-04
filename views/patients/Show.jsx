@@ -15,19 +15,19 @@ class Show extends React.Component {
         <p>Hedwig Pediatrics</p>
         </header>
         <h1>Patient Information</h1>
-        <div className="div">
+        <div className="div" >
           <nav>
             <a className="links" href="/patients">
               Main Page
             </a>
           </nav>
-          <p>
+          <div id="showPatients"><p>
             First and Last Names: {patient.firstName} {patient.lastName}
           </p>
           <p>Date of Birth: {patient.dob}</p>
           <p>Gender: {patient.gender}</p>
           <p>Parent's Name: {patient.parentsName}</p>
-          <p>Address: {patient.address}</p>
+          <p>Address: {patient.address}</p></div>
 
           <nav>
             <a className="links" href={`/patients/${patient.id}/edit`}>

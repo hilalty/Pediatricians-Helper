@@ -14,7 +14,7 @@ class Login extends React.Component {
       <div className="div">
         <div>
         <h1>Welcome to Hedwig Pediatrics Patient Information Tool!</h1>
-        <h3>If you have an account please log in</h3>
+        <h3>If you have an account, please log in</h3>
         
         <form action="/user/login" method="POST">
           Name: <input type="text" defaultValue="" name="username" required />
@@ -22,7 +22,7 @@ class Login extends React.Component {
           <input type="password" defaultValue="" name="password" required />
           <input type="submit" name="" value="Login" />
         </form></div>
-        <div><h3>If you don't have an account,</h3><a className="links" href="/user/signup">
+        <div><h3>If you don't have an account, </h3><a className="links" href="/user/signup">
           Sign up
         </a></div>
       </div>
