@@ -7,10 +7,19 @@ class Show extends React.Component {
 
     return (
       <BasicLayout cssPath="public/css/app.css">
+        <header className="header">
+        <nav><img src="../images/hedwig_2.jpeg" className="hedwig_img" alt="h"/>
+        <a className="logout" href="/user/logout">
+              <button>Logout</button>
+            </a></nav>
+        <p>Hedwig Pediatrics</p>
+        </header>
         <div>
           <h1>Patient Information</h1>
           <nav>
-            <a className="links" href="/patients">Main</a>
+            <a className="links" href="/patients">
+              Main
+            </a>
           </nav>
           <p>
             First and Last Names: {patient.firstName} {patient.lastName}
@@ -19,6 +28,7 @@ class Show extends React.Component {
           <p>Gender: {patient.gender}</p>
           <p>Parent's Name: {patient.parentsName}</p>
           <p>Address: {patient.address}</p>
+
           <nav>
             <a className="links" href={`/patients/${patient.id}/edit`}>
               Edit {patient.firstName}'s Info

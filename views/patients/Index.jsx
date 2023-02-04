@@ -5,19 +5,16 @@ class Index extends React.Component {
   render() {
     const { patients } = this.props;
 
+
     return (
       <BasicLayout cssPath="public/css/app.css">
-        <nav>
-          <a className="logout" href="/user/logout">
-            <button>Logout</button>
-          </a>
-          <a className="buttons" href="/user/signup">
-            <button>Sign up</button>
-          </a>
-          <a className="buttons" href="/user/login">
-            <button>Log in</button>
-          </a>
-        </nav>
+         <header className="header">
+        <nav><img src="../images/hedwig_2.jpeg" className="hedwig_img" alt="h"/>
+        <a className="logout" href="/user/logout">
+              <button>Logout</button>
+            </a></nav>
+        <p>Hedwig Pediatrics</p>
+        </header>
         <h1>Patients Main Page</h1>
         <a className="links" href="/patients/new">
           Create a New Patient Account
@@ -28,6 +25,7 @@ class Index extends React.Component {
             {patients.map((patient, i) => {
               return (
                 <li key={i}>
+                  <p>Doctor's username: {patient.username}</p>
                   <a className="patients" href={`/patients/${patient.id}`}>
                     {" "}
                     {patient.firstName} {patient.lastName}{" "}

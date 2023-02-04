@@ -6,6 +6,13 @@ class Edit extends React.Component {
     const patient = this.props.patient;
     return (
       <BasicLayout cssPath="public/css/app.css">
+                     <header className="header">
+        <nav><img src="../images/hedwig_2.jpeg" className="hedwig_img" alt="h"/>
+        <a className="logout" href="/user/logout">
+              <button>Logout</button>
+            </a></nav>
+        <p>Hedwig Pediatrics</p>
+        </header>
         <h1>
           {patient.firstName} {patient.lastName} Edit Page
         </h1>

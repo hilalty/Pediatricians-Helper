@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const Patient = require("../models/patients.js");
 
 const viewController = require("./viewController.js");
 const dataController = require("./dataController.js");
@@ -15,11 +16,13 @@ router.use((req, res, next) => {
   }
 });
 
+
 router.get("/api", dataController.index, apiController.index);
 
 router.get("/api/:id", dataController.show, apiController.show);
 
 router.delete("/api/:id", dataController.destroy, apiController.show);
+
 
 router.put("/api/:id", dataController.update, apiController.show);
 
