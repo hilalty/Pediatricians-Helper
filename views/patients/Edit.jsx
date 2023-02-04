@@ -4,20 +4,29 @@ const BasicLayout = require("../layout/Basic");
 class Edit extends React.Component {
   render() {
     const patient = this.props.patient;
+
     return (
       <BasicLayout cssPath="public/css/app.css">
-                     <header className="header">
-        <nav><img src="../images/hedwig_2.jpeg" className="hedwig_img" alt="h"/>
-        <a className="logout" href="/user/logout">
+        <header className="header">
+          <nav>
+            <img
+              src="../../images/hedwig_2.jpeg"
+              className="hedwig_img"
+              alt="h"
+            />
+            <a className="logout" href="/user/logout">
               <button>Logout</button>
-            </a></nav>
-        <p>Hedwig Pediatrics</p>
+            </a>
+          </nav>
+          <p>Hedwig Pediatrics</p>
         </header>
         <h1>
           {patient.firstName} {patient.lastName} Edit Page
         </h1>
         <nav>
-          <a className="links" href="/patients">Back</a>
+          <a className="links" href="/patients">
+            Back
+          </a>
         </nav>
         <form action={`/patients/${patient.id}?_method=PUT`} method="POST">
           <p>
@@ -46,7 +55,11 @@ class Edit extends React.Component {
           </p>
           <p>
             Parent's Name:{" "}
-            <input type="text" name="parentsName" defaultValue={patient.parentsName} />
+            <input
+              type="text"
+              name="parentsName"
+              defaultValue={patient.parentsName}
+            />
           </p>
           <p>
             Address:{" "}
@@ -54,7 +67,7 @@ class Edit extends React.Component {
           </p>
           <input type="submit" value="Update" />
         </form>
-        </BasicLayout>
+      </BasicLayout>
     );
   }
 }
